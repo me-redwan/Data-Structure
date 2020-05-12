@@ -20,6 +20,7 @@ struct node
 		ended=false;
 	}
 };
+//INSERT INTO TRIE
 void insert( node *&root,string s){
 	  if (root == nullptr) root = new node; 
 	node *temp=root;
@@ -32,6 +33,7 @@ void insert( node *&root,string s){
 	temp->ended=true;
 }
 
+//SEARCH INTO TRIE
 bool search(node * root,string s){
 	 if (root == nullptr) return false; 
 	node *temp=root;
@@ -41,6 +43,8 @@ bool search(node * root,string s){
 	}
 	return temp->ended;
 }
+
+//DISTROY TRIE
 void del(node*&root){
 	if(root==nullptr)return;
     for(auto it=root->mp.begin();it!=root->mp.end();it++){
