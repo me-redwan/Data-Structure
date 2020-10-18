@@ -22,7 +22,7 @@ int main(){
             sf(n);//scan
             ll arr[n+1];// array for finding roots
             ll wig[n+1]; // array for storing weight
-            for(int i=1;i<=n;i++){arr[i]=i;}//setting all elements root = itself ; and all weight =1
+            for(int i=1;i<=n;i++){arr[i]=i;wig[i]=1;}//setting all elements root = itself ; and all weight =1
             ll a,b;
             sff(a,b);
             ll x=find(arr,a);// find root of first element
